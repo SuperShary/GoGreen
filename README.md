@@ -17,6 +17,14 @@
   <strong>Just copy → run → stay green. Works on corporate laptops.</strong>
 </p>
 
+<p align="center">
+  <img src="assets/gogreen-screenshot.png" alt="GoGreen App Screenshot - Keep Microsoft Teams Status Green Available Always - Dark Theme GUI with Duration Control Schedule and Activity Log" width="420">
+</p>
+
+<p align="center">
+  <em>GoGreen running on macOS — premium dark-theme interface with full customization</em>
+</p>
+
 ---
 
 ## 📖 Table of Contents
@@ -239,11 +247,17 @@ GoGreen shows a helpful guide on first launch.
 
 ## 🖼️ Screenshots
 
-*Screenshots coming soon — the app features a premium dark-theme interface with:*
-- *Green pulsing status dot when active*
-- *Live countdown timer*
-- *Duration, interval, and schedule controls*
-- *Real-time activity log*
+<p align="center">
+  <img src="assets/gogreen-screenshot.png" alt="GoGreen Microsoft Teams Status Keeper - Dark Theme GUI Screenshot showing Active Status Duration Control Activity Interval Schedule and Activity Log" width="500">
+</p>
+
+**What you see above:**
+- 🟢 **Active status** with pulsing green indicator and live timer
+- ⏱️ **Duration control** — presets (2h/4h/8h/12h), custom, or infinite
+- 🔄 **Activity interval slider** — 30 seconds to 5 minutes
+- 📅 **Schedule mode** — set start/stop times and active days
+- ▶ ⏸ ⏹ **One-click controls** — Start, Pause, Stop
+- 📋 **Activity log** — real-time timestamped entries
 
 ---
 
