@@ -7,8 +7,8 @@
   <img src="https://img.shields.io/badge/Install-ZERO_Dependencies-blueviolet?style=for-the-badge" alt="Zero Install No Dependencies No Pip No Admin">
   <img src="https://img.shields.io/badge/Platform-macOS_|_Windows-lightgrey?style=for-the-badge&logo=apple&logoColor=white" alt="Works on macOS and Windows">
   <img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.7+ Required">
-  <img src="https://img.shields.io/github/stars/YOUR_USERNAME/gogreen?style=for-the-badge&color=yellow&logo=github" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/license/YOUR_USERNAME/gogreen?style=for-the-badge" alt="MIT License">
+  <img src="https://img.shields.io/github/stars/SuperShary/GoGreen?style=for-the-badge&color=yellow&logo=github" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/license/SuperShary/GoGreen?style=for-the-badge" alt="MIT License">
 </p>
 
 <p align="center">
@@ -94,8 +94,8 @@ It works by simulating tiny, imperceptible mouse movements and keyboard presses 
 ### Option B: Git Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gogreen.git
-cd gogreen
+git clone https://github.com/SuperShary/GoGreen.git
+cd GoGreen
 python3 main.py
 ```
 
@@ -371,7 +371,7 @@ If GoGreen helped you stay green (and maybe saved your reputation), please give 
 
 Every star helps other people discover this tool. Let's build a movement for stress-free remote work. 💚
 
-[![Star History](https://img.shields.io/github/stars/YOUR_USERNAME/gogreen?style=social)](https://github.com/YOUR_USERNAME/gogreen)
+[![Star History](https://img.shields.io/github/stars/SuperShary/GoGreen?style=social)](https://github.com/SuperShary/GoGreen)
 
 ---
 
