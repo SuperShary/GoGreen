@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <span class="dot" id="headerDot"></span>
+        <h1>GoGreen</h1>
+      </div>
+      <span class="version">v2</span>
+    </div>
+
+    <!-- Status Card -->
+    <div class="status-card" id="statusCard">
+      <div class="status-row">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-text" id="statusText">Inactive</span>
+      </div>
+      <p class="status-detail" id="statusDetail">Click START to keep Teams green</p>
+    </div>
+
+    <!-- Toggle Button -->
+    <button class="btn-toggle" id="toggleBtn">▶  START</button>
+
+    <!-- Settings -->
+    <div class="settings-card">
+      <div class="setting-row">
+        <label class="setting-label">Interval</label>
+        <div class="slider-row">
+          <span class="range-label">30s</span>
+          <input type="range" min="30" max="300" value="60" step="10"
+                 class="slider" id="intervalSlider">
+          <span class="range-label">5m</span>
+        </div>
+        <span class="setting-value" id="intervalValue">Every 60 seconds</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="setting-row">
+        <label class="toggle-label">
+          <input type="checkbox" id="autoStart" checked>
+          <span class="checkmark"></span>
+          Auto-start on Teams
+        </label>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="info-card">
+      <p class="info-text">
+        ✅ Works on <strong>teams.microsoft.com</strong><br>
+        📌 For desktop app → use the <strong>Python tool</strong>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>GoGreen — Keep Teams Green</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

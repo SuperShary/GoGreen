@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════════════════════════
+   GoGreen Chrome Extension — Popup Styles
+   Premium dark theme matching the Python desktop app.
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  min-height: 420px;
+  background: #08080f;
+  color: #e4e4f0;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff8860;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00ff88;
+  letter-spacing: -0.5px;
+}
+
+.version {
+  font-size: 11px;
+  color: #555570;
+  padding: 2px 6px;
+  border: 1px solid #1e1e38;
+  border-radius: 4px;
+}
+
+/* ── Status Card ─────────────────────────────────────────────── */
+.status-card {
+  background: #101020;
+  border: 1px solid #1e1e38;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.status-card.active {
+  border-color: #00ff88;
+  box-shadow: 0 0 20px #00ff8815;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #555570;
+  transition: all 0.3s ease;
+}
+
+.status-dot.active {
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff8880;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 6px #00ff8840; }
+  50% { box-shadow: 0 0 14px #00ff88a0; }
+}
+
+.status-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #555570;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.status-text.active {
+  color: #00ff88;
+}
+
+.status-detail {
+  font-size: 11px;
+  color: #555570;
+  margin-top: 4px;
+}
+
+/* ── Toggle Button ───────────────────────────────────────────── */
+.btn-toggle {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #00ff88;
+  color: #08080f;
+}
+
+.btn-toggle:hover {
+  background: #00cc6a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px #00ff8830;
+}
+
+.btn-toggle:active {
+  transform: translateY(0);
+}
+
+.btn-toggle.stop {
+  background: #ff4757;
+  color: #fff;
+}
+
+.btn-toggle.stop:hover {
+  background: #cc3040;
+  box-shadow: 0 4px 16px #ff475730;
+}
+
+/* ── Settings Card ───────────────────────────────────────────── */
+.settings-card {
+  background: #101020;
+  border: 1px solid #1e1e38;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.setting-row {
+  margin-bottom: 4px;
+}
+
+.setting-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7c4dff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range-label {
+  font-size: 10px;
+  color: #555570;
+  min-width: 20px;
+}
+
+.slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #1a1a30;
+  border-radius: 2px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0 0 6px #00ff8860;
+}
+
+.setting-value {
+  display: block;
+  font-size: 11px;
+  color: #9090a8;
+  margin-top: 4px;
+}
+
+.divider {
+  height: 1px;
+  background: #1e1e38;
+  margin: 10px 0;
+}
+
+/* ── Auto-start Toggle ───────────────────────────────────────── */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #e4e4f0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 36px;
+  height: 20px;
+  background: #1a1a30;
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #555570;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-label input:checked + .checkmark {
+  background: #00ff8840;
+}
+
+.toggle-label input:checked + .checkmark::after {
+  transform: translateX(16px);
+  background: #00ff88;
+}
+
+/* ── Info Card ───────────────────────────────────────────────── */
+.info-card {
+  background: #0d0d1a;
+  border: 1px solid #1e1e38;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.info-text {
+  font-size: 11px;
+  color: #9090a8;
+  line-height: 1.5;
+}
+
+.info-text strong {
+  color: #e4e4f0;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 4px 0 0;
+}
+
+.footer span {
+  font-size: 10px;
+  color: #333348;
+  letter-spacing: 0.5px;
+}

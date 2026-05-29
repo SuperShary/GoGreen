@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "GoGreen — Keep Teams Status Green",
+  "description": "Keep your Microsoft Teams status always Available (green). Auto-prevents idle timeout on Teams web. Zero configuration.",
+  "version": "2.0.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://teams.microsoft.com/*",
+    "*://teams.live.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://teams.microsoft.com/*",
+        "*://teams.live.com/*"
+      ],
+      "js": ["inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "*://teams.microsoft.com/*",
+        "*://teams.live.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
-# 🟢 GoGreen — Keep Microsoft Teams Status Green & Available (Always)
+# 🟢 GoGreen v2 — Keep Microsoft Teams Status Green & Available (Always)
 
 ### The #1 open-source tool to keep your Microsoft Teams status "Available" — without installing anything.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Teams_Status-Always_Green_🟢-00e676?style=for-the-badge&logo=microsoftteams&logoColor=white" alt="Keep Microsoft Teams Status Green Always Available">
   <img src="https://img.shields.io/badge/Install-ZERO_Dependencies-blueviolet?style=for-the-badge" alt="Zero Install No Dependencies No Pip No Admin">
-  <img src="https://img.shields.io/badge/Platform-macOS_|_Windows-lightgrey?style=for-the-badge&logo=apple&logoColor=white" alt="Works on macOS and Windows">
+  <img src="https://img.shields.io/badge/Platform-macOS_|_Windows_|_Chrome-lightgrey?style=for-the-badge&logo=apple&logoColor=white" alt="Works on macOS Windows and Chrome">
   <img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.7+ Required">
   <img src="https://img.shields.io/github/stars/SuperShary/GoGreen?style=for-the-badge&color=yellow&logo=github" alt="GitHub Stars">
   <img src="https://img.shields.io/github/license/SuperShary/GoGreen?style=for-the-badge" alt="MIT License">
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <em>GoGreen running on macOS — premium dark-theme interface with full customization</em>
+  <em>GoGreen v2 running on macOS — premium dark-theme interface with full customization</em>
 </p>
 
 ---
@@ -30,13 +30,12 @@
 ## 📖 Table of Contents
 
 - [The Problem](#-the-problem)
-- [The Solution](#-the-solution--gogreen)
-- [Quick Start (30 Seconds)](#-quick-start--30-seconds)
+- [Two Solutions — Pick Yours](#-two-solutions--pick-yours)
+- [🐍 Python Desktop Tool](#-option-a--python-desktop-tool)
+- [🌐 Chrome Extension](#-option-b--chrome-extension)
 - [Features](#-features)
 - [How It Works](#-how-it-works)
-- [Supported Platforms](#-supported-platforms)
 - [Requirements](#-requirements)
-- [Screenshots](#-screenshots)
 - [FAQ](#-frequently-asked-questions)
 - [Comparison with Other Tools](#-comparison-with-other-tools)
 - [Contributing](#-contributing)
@@ -60,162 +59,183 @@ Your manager, your team, and your entire organization can see that yellow "Away"
 
 ---
 
-## 💡 The Solution — GoGreen
+## 🎯 Two Solutions — Pick Yours
 
-**GoGreen** is a lightweight, open-source Python application that keeps your Microsoft Teams status set to **"Available" (green)** at all times.
+GoGreen v2 offers **TWO ways** to keep your Teams status green. Choose the one that fits your situation:
 
-It works by simulating tiny, imperceptible mouse movements and keyboard presses at regular intervals — just enough to prevent Teams from detecting you as idle.
+| | 🐍 Python Desktop Tool | 🌐 Chrome Extension |
+|---|:---:|:---:|
+| **Works with** | Teams Desktop App + Web | Teams Web only |
+| **Requires** | Python 3.7+ | Chrome/Edge browser |
+| **Install needed** | No pip, no admin | No install — load unpacked |
+| **OS support** | macOS + Windows | Any OS with Chrome |
+| **Best for** | Desktop app users | Locked-down laptops (no Python) |
+| **Simulation method** | OS-level input (real mouse/keyboard) | Page API override + DOM events |
 
-### ✅ What makes GoGreen different?
-
-| | GoGreen | Mouse Jigglers | Other Scripts | Browser Extensions |
-|---|:---:|:---:|:---:|:---:|
-| **Zero install** (no pip, no brew, no admin) | ✅ | ❌ | ❌ | ❌ |
-| **Works on locked corporate laptops** | ✅ | ❌ | ❌ | ⚠️ |
-| **Cross-platform** (macOS + Windows) | ✅ | ⚠️ | ⚠️ | ✅ |
-| **Beautiful GUI with dark theme** | ✅ | ❌ | ❌ | ❌ |
-| **Customizable duration** (2h–∞) | ✅ | ❌ | ❌ | ❌ |
-| **Schedule mode** (auto start/stop) | ✅ | ❌ | ❌ | ❌ |
-| **Prevents laptop sleep** | ✅ | ✅ | ❌ | ❌ |
-| **Activity log** | ✅ | ❌ | ❌ | ❌ |
-| **Open source & free** | ✅ | ❌ | ✅ | ⚠️ |
-| **No USB device needed** | ✅ | ❌ | ✅ | ✅ |
+> **🏢 Can't install Python?** Use the Chrome Extension.
+> **💻 Using Teams desktop app?** Use the Python Tool.
+> **🔥 Maximum coverage?** Use both.
 
 ---
 
-## 🚀 Quick Start — 30 Seconds
+## 🐍 Option A — Python Desktop Tool
 
-### Option A: Download ZIP (Easiest — No Git Required)
+**Best for:** Teams Desktop App users on macOS and Windows.
 
+### Quick Start (30 Seconds)
+
+**Download ZIP:**
 1. Click the green **"Code"** button above → **"Download ZIP"**
-2. Extract the ZIP folder anywhere on your computer
-3. Open **Terminal** (macOS) or **Command Prompt** (Windows)
-4. Navigate to the folder:
-   ```bash
-   cd path/to/gogreen
-   ```
-5. Run it:
+2. Extract anywhere → Open Terminal/Command Prompt
+3. Run:
    ```bash
    python3 main.py
    ```
 
-### Option B: Git Clone
-
+**Or Git Clone:**
 ```bash
 git clone https://github.com/SuperShary/GoGreen.git
 cd GoGreen
 python3 main.py
 ```
 
-> **Windows users:** Use `python main.py` instead of `python3 main.py`
+> **Windows:** Use `python main.py` instead of `python3`
 
-### That's it. No `pip install`. No virtual environment. No admin password.
+**That's it. No `pip install`. No admin password. No virtual environment.**
 
-The GoGreen window will open with a beautiful dark-themed interface. Click **▶ START** and your Teams status will stay green.
+### What's New in v2
+
+- 🔐 **Permission detection** — shows warning if Accessibility permissions are missing (macOS)
+- 🔘 **One-click fix** — button to open System Settings → Accessibility directly
+- 🛡️ **`caffeinate -u` fallback** — asserts user activity even without Accessibility permissions
+- 🖱️ **5px mouse wiggle** — more reliable than the 1px wiggle in v1
+- ⌨️ **Multiple keyboard fallbacks** — Shift → F15 → keystroke
+- 📋 **Bigger activity log** — scrollable, color-coded entries
+- 🔢 **Cycle counter** — see exactly how many simulation cycles have run
+- 🎨 **Darker, more futuristic UI** — near-black theme with neon green accents
+
+### macOS: Accessibility Permission
+
+GoGreen simulates mouse/keyboard input, which requires Accessibility permission:
+
+1. Open **System Settings** → **Privacy & Security** → **Accessibility**
+2. Add and enable your **Terminal** app
+3. GoGreen v2 shows a **yellow warning banner** with a **one-click fix button** if permissions are missing
+
+---
+
+## 🌐 Option B — Chrome Extension
+
+**Best for:** People who can't install Python, Chromebook users, or anyone using Teams in the browser.
+
+### Quick Start (60 Seconds)
+
+1. Download this repository (ZIP or clone)
+2. Open Chrome → navigate to `chrome://extensions`
+3. Enable **"Developer mode"** (toggle in top-right)
+4. Click **"Load unpacked"**
+5. Select the `chrome-extension` folder from this repository
+6. Open **teams.microsoft.com** in Chrome
+7. Click the GoGreen extension icon → **▶ START**
+
+### How the Extension Works
+
+The Chrome extension uses a **three-layer approach** specifically designed for Teams web:
+
+| Layer | What It Does | Why It Works |
+|---|---|---|
+| **Visibility Override** | Makes `document.hidden` return `false` always | Teams checks this to detect tab switches |
+| **Focus Override** | Makes `document.hasFocus()` return `true` always | Teams checks this for window focus |
+| **DOM Event Simulation** | Dispatches mousemove, keydown, pointermove events | Backup activity simulation |
+
+**Key advantage:** The extension **automatically activates** when you open Teams in the browser. No interaction needed after setup.
+
+### Extension Features
+
+- 🟢 **Auto-start** — activates automatically on `teams.microsoft.com`
+- 🔄 **Adjustable interval** — 30 seconds to 5 minutes
+- 🎨 **Dark theme popup** — matches the GoGreen aesthetic
+- 📌 **Badge indicator** — shows "ON" when active
+- 💾 **Persistent settings** — remembers your preferences
+- 🚫 **Zero permissions abuse** — only accesses Teams domains
 
 ---
 
 ## 🎛️ Features
 
-### ⏱️ Duration Control
-Choose exactly how long to keep your status green:
+### ⏱️ Duration Control (Python Tool)
 - **Presets**: 2 hours, 4 hours, 8 hours, 12 hours
 - **Custom**: Enter any number of hours
 - **Infinite mode**: Runs until you stop it manually
 
 ### 🔄 Adjustable Activity Interval
-Control how frequently GoGreen simulates activity:
 - Slide between **30 seconds** and **5 minutes**
-- Lower interval = more reliable, higher = more subtle
-- Default: 60 seconds (recommended)
+- Both Python tool and Chrome extension support this
 
-### 📅 Schedule Mode (Set It & Forget It)
-Automate your green status on a weekly schedule:
-- Set **start time** (e.g., 09:00 AM) and **stop time** (e.g., 06:00 PM)
+### 📅 Schedule Mode (Python Tool)
+- Set **start time** and **stop time**
 - Choose **active days** (Monday through Sunday)
-- GoGreen auto-starts and auto-stops — no manual intervention needed
-- Perfect for standard work hours
+- GoGreen auto-starts and auto-stops — no manual intervention
 
-### 📋 Live Activity Log
-Real-time log showing every action GoGreen takes:
-- Timestamped entries for each mouse wiggle and key press
-- Engine start/stop/pause events
-- Schedule trigger notifications
-
-### 🎨 Premium Dark Theme GUI
-No ugly terminal scripts. GoGreen has a polished desktop interface with:
-- Animated pulsing status indicator (green / amber / gray)
-- Live countdown timer
-- Intuitive controls (Start, Pause, Stop)
-- Clean card-based layout
-
-### 💾 Persistent Settings
-Your preferences are saved automatically:
-- Duration, interval, schedule — everything persists between sessions
-- Settings stored locally at `~/.gogreen/settings.json`
-- No cloud, no accounts, no telemetry
+### 📋 Live Activity Log (Python Tool)
+- Color-coded entries (✅ success, ⚠ warning, ❌ failure)
+- Scrollable with 500+ entry capacity
+- Cycle counter
 
 ### 😴 Sleep Prevention
-GoGreen prevents your laptop from going to sleep:
-- **macOS**: Uses built-in `caffeinate` command
-- **Windows**: Uses `kernel32.dll` `SetThreadExecutionState` API
-- No third-party sleep prevention tools needed
+- **macOS**: `caffeinate -diu` (display + idle + user activity)
+- **Windows**: `kernel32.dll` `SetThreadExecutionState`
 
 ---
 
 ## ⚙️ How It Works
 
-GoGreen uses a **triple-layer approach** to keep Microsoft Teams status green:
+### Python Desktop Tool — OS-Level Simulation
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║                                                          ║
-║  Layer 1: 🖱️  MOUSE WIGGLE                               ║
-║  → Moves cursor 1 pixel right, then 1 pixel back        ║
-║  → Completely invisible to the user                      ║
-║  → macOS: CoreGraphics via osascript                     ║
+║  Layer 1: 🖱️  MOUSE WIGGLE (5px)                        ║
+║  → macOS: CoreGraphics via osascript (JXA)              ║
 ║  → Windows: user32.dll SetCursorPos via ctypes           ║
-║                                                          ║
 ╠══════════════════════════════════════════════════════════╣
-║                                                          ║
-║  Layer 2: ⌨️  SHIFT KEY PRESS                             ║
-║  → Presses and releases the Shift key                    ║
-║  → Harmless — produces no visible output                 ║
+║  Layer 2: ⌨️  KEYBOARD PRESS (Shift → F15 fallback)      ║
 ║  → macOS: System Events via osascript                    ║
 ║  → Windows: user32.dll keybd_event via ctypes            ║
-║                                                          ║
 ╠══════════════════════════════════════════════════════════╣
-║                                                          ║
-║  Layer 3: 😴  SLEEP PREVENTION                            ║
-║  → Prevents display and system idle sleep                ║
-║  → macOS: caffeinate -di (built-in command)              ║
-║  → Windows: SetThreadExecutionState (built-in API)       ║
-║                                                          ║
+║  Layer 3: ☕  SLEEP PREVENTION + USER ACTIVITY            ║
+║  → macOS: caffeinate -diu (display+idle+user)            ║
+║  → Windows: SetThreadExecutionState (ES_DISPLAY_REQUIRED)║
+╠══════════════════════════════════════════════════════════╣
+║  Layer 4: 🛡️  FALLBACK (macOS, no permissions needed)    ║
+║  → caffeinate -u -t 2 (asserts user activity at IOKit)   ║
 ╚══════════════════════════════════════════════════════════╝
 ```
 
-**Important:** GoGreen does **NOT**:
-- Access the Microsoft Teams API
-- Modify any Teams settings or files
-- Send any data anywhere
-- Require internet access
-- Install any software or drivers
+### Chrome Extension — Page API Override
 
-It simply simulates keyboard and mouse input at the OS level — indistinguishable from you actually using your computer.
-
----
-
-## 🖥️ Supported Platforms
-
-| Platform | Status | Simulation Method |
-|---|:---:|---|
-| **macOS** (Intel & Apple Silicon) | ✅ Fully supported | `osascript` (CoreGraphics + System Events) + `caffeinate` |
-| **Windows 10/11** | ✅ Fully supported | `ctypes` → `user32.dll` + `kernel32.dll` |
-| **Linux** | 🔜 Coming soon | PRs welcome! |
+```
+╔══════════════════════════════════════════════════════════╗
+║  Layer 1: 👁️  VISIBILITY API OVERRIDE                    ║
+║  → document.hidden → always false                        ║
+║  → document.visibilityState → always "visible"           ║
+║  → visibilitychange events → blocked                     ║
+╠══════════════════════════════════════════════════════════╣
+║  Layer 2: 🎯  FOCUS OVERRIDE                             ║
+║  → document.hasFocus() → always true                     ║
+║  → window blur events → blocked                          ║
+║  → IdleDetector API → intercepted                        ║
+╠══════════════════════════════════════════════════════════╣
+║  Layer 3: 🖱️  DOM EVENT SIMULATION                       ║
+║  → mousemove, keydown/keyup, pointermove events          ║
+║  → Dispatched at configurable intervals                  ║
+╚══════════════════════════════════════════════════════════╝
+```
 
 ---
 
 ## 📋 Requirements
+
+### Python Desktop Tool
 
 | Requirement | Details |
 |---|---|
@@ -223,41 +243,41 @@ It simply simulates keyboard and mouse input at the OS level — indistinguishab
 | **pip packages** | ❌ None — zero external dependencies |
 | **Admin rights** | ❌ Not required |
 | **Internet** | ❌ Not required (works offline) |
-| **External tools** | ❌ None — uses only OS built-in tools |
 
-### Where to get Python
+### Chrome Extension
 
-| Platform | How to check | How to install |
-|---|---|---|
-| **macOS** | Open Terminal → `python3 --version` | Usually pre-installed. If not: [python.org/downloads](https://www.python.org/downloads/) |
-| **Windows** | Open CMD → `python --version` | [python.org/downloads](https://www.python.org/downloads/) — check "Add to PATH" during install |
+| Requirement | Details |
+|---|---|
+| **Browser** | Chrome 111+ or Edge (Chromium-based) |
+| **Install** | Load unpacked (Developer mode) |
+| **Permissions** | Storage only — no broad access |
 
-### macOS: Accessibility Permission
+---
 
-GoGreen simulates mouse/keyboard input, which requires Accessibility permission on macOS:
+## 🖥️ Supported Platforms
 
-1. Open **System Settings**
-2. Go to **Privacy & Security** → **Accessibility**
-3. Click the **+** button and add your **Terminal** app (e.g., Terminal.app, iTerm, VS Code)
-4. Enable the toggle
-
-GoGreen shows a helpful guide on first launch.
+| Platform | Python Tool | Chrome Extension |
+|---|:---:|:---:|
+| **macOS** (Intel & Apple Silicon) | ✅ | ✅ |
+| **Windows 10/11** | ✅ | ✅ |
+| **Linux** | 🔜 Coming soon | ✅ |
+| **ChromeOS** | ❌ | ✅ |
 
 ---
 
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img src="assets/gogreen-screenshot.png" alt="GoGreen Microsoft Teams Status Keeper - Dark Theme GUI Screenshot showing Active Status Duration Control Activity Interval Schedule and Activity Log" width="500">
+  <img src="assets/gogreen-screenshot.png" alt="GoGreen Microsoft Teams Status Keeper - Dark Theme GUI Screenshot" width="500">
 </p>
 
-**What you see above:**
+**Python Desktop Tool features:**
 - 🟢 **Active status** with pulsing green indicator and live timer
 - ⏱️ **Duration control** — presets (2h/4h/8h/12h), custom, or infinite
 - 🔄 **Activity interval slider** — 30 seconds to 5 minutes
 - 📅 **Schedule mode** — set start/stop times and active days
 - ▶ ⏸ ⏹ **One-click controls** — Start, Pause, Stop
-- 📋 **Activity log** — real-time timestamped entries
+- 📋 **Activity log** — real-time color-coded timestamped entries
 
 ---
 
@@ -266,106 +286,115 @@ GoGreen shows a helpful guide on first launch.
 <details>
 <summary><strong>Is GoGreen safe to use?</strong></summary>
 <br>
-Yes. GoGreen only simulates a 1-pixel mouse movement and a Shift key press. It doesn't access Teams APIs, doesn't modify system files, and doesn't transmit any data. It's the digital equivalent of jiggling your mouse while reading a document.
+Yes. The Python tool simulates a 5-pixel mouse movement and a Shift key press. The Chrome extension overrides page visibility APIs. Neither accesses Teams APIs, modifies system files, or transmits any data.
 </details>
 
 <details>
-<summary><strong>Will my IT department detect GoGreen?</strong></summary>
+<summary><strong>Will my IT department detect this?</strong></summary>
 <br>
-GoGreen doesn't install any software, doesn't create services, and doesn't modify the registry. It's just a Python script that runs in user space. The input it generates is identical to real keyboard and mouse activity. Most IT monitoring tools cannot distinguish GoGreen's activity from genuine user input.
+GoGreen doesn't install software, create services, or modify the registry. The Python tool generates input identical to real user activity. The Chrome extension runs entirely within the browser. Most IT monitoring tools cannot distinguish GoGreen's activity from genuine usage.
 </details>
 
 <details>
-<summary><strong>Does GoGreen work with the new Microsoft Teams?</strong></summary>
+<summary><strong>Does it work with the new Microsoft Teams?</strong></summary>
 <br>
-Yes. GoGreen works with both the classic and new (Teams 2.0) versions of Microsoft Teams on both macOS and Windows. Since it operates at the OS input level, it works regardless of which Teams version you use.
+Yes. Both the Python tool and Chrome extension work with classic and new (Teams 2.0) versions.
 </details>
 
 <details>
-<summary><strong>Can I use GoGreen on my company/corporate laptop?</strong></summary>
+<summary><strong>Can I use this on a company laptop?</strong></summary>
 <br>
-Yes — GoGreen was specifically designed for corporate environments. It requires no installation, no admin password, no pip packages, and no USB devices. Just copy the files and run <code>python3 main.py</code>.
+Yes — that's what GoGreen was designed for. If Python is available, use the desktop tool. If not, use the Chrome extension — it requires zero installation.
+</details>
+
+<details>
+<summary><strong>Chrome extension vs Python tool — which should I use?</strong></summary>
+<br>
+If you use the <strong>Teams desktop app</strong>, use the Python tool. If you use <strong>Teams in the browser</strong>, either works, but the Chrome extension is simpler. If you can't install Python, the Chrome extension is your only option.
 </details>
 
 <details>
 <summary><strong>Does GoGreen drain battery?</strong></summary>
 <br>
-Minimal impact. GoGreen simulates one tiny mouse wiggle + one key press every 60 seconds by default. CPU usage is essentially zero. However, the sleep prevention feature does keep your display on, which uses battery. Consider plugging in for extended use.
+Minimal impact. Activity is simulated once every 60 seconds by default. The sleep prevention feature does keep your display on, so consider plugging in for extended use.
 </details>
 
 <details>
-<summary><strong>Does GoGreen work when the laptop lid is closed?</strong></summary>
+<summary><strong>Does it work with Slack, Zoom, or other apps?</strong></summary>
 <br>
-No. Closing the laptop lid puts the hardware into sleep mode, which no software can override. Keep the lid open for GoGreen to work. You can reduce screen brightness to save energy.
+The Python tool works with ALL apps since it simulates OS-level input. The Chrome extension only affects Teams web (teams.microsoft.com).
 </details>
 
 <details>
-<summary><strong>How is this different from a USB mouse jiggler?</strong></summary>
+<summary><strong>Why no pip install?</strong></summary>
 <br>
-USB mouse jigglers are physical devices that many corporate IT departments block or detect. GoGreen is pure software — no USB device, no driver installation, nothing to plug in. It also offers features no hardware jiggler can: scheduling, duration control, GUI, and activity logs.
+By design. Many corporate laptops restrict <code>pip install</code>. GoGreen uses only Python's standard library and OS-native tools. The Chrome extension also requires zero installation.
 </details>
 
 <details>
-<summary><strong>Does GoGreen work with Slack, Zoom, or other apps?</strong></summary>
+<summary><strong>How do I install the Chrome extension?</strong></summary>
 <br>
-Yes! While designed for Microsoft Teams, GoGreen's mouse wiggle and key press simulation prevents <em>any</em> application from detecting you as idle. This includes Slack, Zoom, Webex, Skype, and your operating system's screen saver.
+1. Download this repo → 2. Open <code>chrome://extensions</code> → 3. Enable Developer mode → 4. Click "Load unpacked" → 5. Select the <code>chrome-extension</code> folder. That's it!
 </details>
 
 <details>
-<summary><strong>Why is there no pip install / requirements.txt?</strong></summary>
+<summary><strong>Does the Chrome extension work on Edge?</strong></summary>
 <br>
-By design. Many corporate laptops restrict <code>pip install</code> and require admin approval for software installation. GoGreen uses only Python's standard library and OS-native tools, so it works everywhere Python is available — no additional packages needed.
-</details>
-
-<details>
-<summary><strong>Can I run GoGreen in the background?</strong></summary>
-<br>
-The GoGreen GUI window needs to stay open (you can minimize it). A future update will add system tray / menu bar support for a more seamless background experience.
+Yes! Microsoft Edge is Chromium-based and supports the same extension format. Follow the same steps but use <code>edge://extensions</code>.
 </details>
 
 ---
 
 ## 🔧 Comparison with Other Tools
 
-### GoGreen vs. Mouse Jiggler (Hardware)
-Hardware mouse jigglers plug into your USB port and simulate mouse movement. However, many corporate IT departments have endpoint detection that **blocks unknown USB devices** or flags them. GoGreen requires no hardware — it's pure software.
-
-### GoGreen vs. Caffeine / Amphetamine (macOS)
-Caffeine and Amphetamine prevent your Mac from sleeping, but **they don't simulate user activity**. Teams will still mark you as "Away" because there's no keyboard or mouse input. GoGreen does both: prevents sleep AND simulates activity.
-
-### GoGreen vs. PowerToys Awake (Windows)
-Microsoft's PowerToys Awake keeps your PC awake, but like Caffeine, it **doesn't simulate input**. Teams will still show you as inactive. GoGreen simulates actual mouse and keyboard activity that Teams recognizes.
-
-### GoGreen vs. PyAutoGUI Scripts
-Many online scripts use `pyautogui` for mouse/keyboard simulation. The problem? `pyautogui` requires **pip install**, which is blocked on many corporate laptops. GoGreen uses `osascript` (macOS) and `ctypes` (Windows) — both built into the OS. **Zero pip packages needed.**
-
-### GoGreen vs. AutoHotKey (Windows)
-AutoHotKey is powerful but requires **installation** and is **Windows-only**. Many corporate laptops block `.ahk` scripts or the AutoHotKey runtime. GoGreen is cross-platform and needs no installation.
+| Tool | Zero Install | Works Offline | Desktop App | Web App | Cross-Platform | GUI | Schedule | Free |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **GoGreen (Python)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **GoGreen (Chrome)** | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ | ✅ |
+| Mouse Jiggler (USB) | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Caffeine / Amphetamine | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| PowerToys Awake | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ |
+| PyAutoGUI scripts | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
+| AutoHotKey | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-gogreen/
-├── main.py          ← 🚀 Run this file to start GoGreen
-├── app.py           ← 🎨 GUI (premium dark theme, all controls)
-├── engine.py        ← ⚙️ Simulation engine (mouse, keyboard, sleep)
-├── scheduler.py     ← 📅 Auto start/stop scheduling
-├── settings.py      ← 💾 Settings persistence (JSON)
-├── LICENSE          ← 📄 MIT License
-├── README.md        ← 📖 This file
-└── .gitignore       ← 🙈 Git ignore rules
+GoGreen/
+├── 🐍 Python Desktop Tool
+│   ├── main.py          ← 🚀 Run this to start
+│   ├── app.py           ← 🎨 Dark theme GUI
+│   ├── engine.py        ← ⚙️ Simulation engine
+│   ├── scheduler.py     ← 📅 Auto scheduling
+│   └── settings.py      ← 💾 Settings persistence
+│
+├── 🌐 Chrome Extension
+│   └── chrome-extension/
+│       ├── manifest.json  ← Extension config (MV3)
+│       ├── inject.js      ← Page API overrides (MAIN world)
+│       ├── content.js     ← Extension messaging bridge
+│       ├── background.js  ← Service worker
+│       ├── popup.html     ← Extension popup UI
+│       ├── popup.css      ← Popup styles
+│       ├── popup.js       ← Popup logic
+│       └── icons/         ← Extension icons
+│
+├── assets/              ← Screenshots
+├── LICENSE              ← MIT License
+├── README.md            ← This file
+└── .gitignore
 ```
 
 ---
 
 ## 🤝 Contributing
 
-GoGreen is open source and contributions are welcome! Here's how:
+GoGreen is open source and contributions are welcome!
 
 1. **Fork** the repository
-2. **Create** your feature branch: `git checkout -b feature/amazing-feature`
+2. **Create** your branch: `git checkout -b feature/amazing-feature`
 3. **Commit** your changes: `git commit -m 'Add amazing feature'`
 4. **Push** to the branch: `git push origin feature/amazing-feature`
 5. **Open** a Pull Request
@@ -375,15 +404,16 @@ GoGreen is open source and contributions are welcome! Here's how:
 - 🖼️ **System tray icon** — minimize to menu bar / system tray
 - 🌍 **Localization** — translate the GUI to other languages
 - 📊 **Statistics** — track daily/weekly green time
-- 🔔 **Notifications** — alert when duration is ending
+- 🏪 **Chrome Web Store** — publish the extension publicly
+- 🦊 **Firefox extension** — port to Firefox Add-ons
 
 ---
 
 ## ⭐ Star This Repo!
 
-If GoGreen helped you stay green (and maybe saved your reputation), please give it a **⭐ star**!
+If GoGreen helped you stay green, give it a **⭐ star**!
 
-Every star helps other people discover this tool. Let's build a movement for stress-free remote work. 💚
+Every star helps other people discover this tool. Let's build a movement. 💚
 
 [![Star History](https://img.shields.io/github/stars/SuperShary/GoGreen?style=social)](https://github.com/SuperShary/GoGreen)
 
@@ -391,13 +421,13 @@ Every star helps other people discover this tool. Let's build a movement for str
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — you're free to use, modify, and distribute it. See [LICENSE](LICENSE) for details.
+MIT License — free to use, modify, and distribute. See [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🔑 Keywords
 
-`keep teams status green` · `teams always available` · `prevent teams away status` · `microsoft teams green status` · `teams anti idle` · `teams mouse jiggler` · `teams status hack` · `keep teams active` · `teams away fix` · `corporate laptop teams status` · `no install teams green` · `teams status available python` · `prevent teams idle` · `teams status tool` · `remote work tools` · `work from home teams` · `teams always online` · `python mouse jiggler` · `cross platform teams tool` · `teams status keeper`
+`keep teams status green` · `teams always available` · `prevent teams away status` · `microsoft teams green status` · `teams anti idle` · `teams mouse jiggler` · `teams status hack` · `keep teams active` · `teams away fix` · `corporate laptop teams status` · `no install teams green` · `teams status available python` · `prevent teams idle` · `teams status tool` · `remote work tools` · `work from home teams` · `teams always online` · `python mouse jiggler` · `cross platform teams tool` · `teams status keeper` · `teams chrome extension` · `teams web green status` · `teams browser extension` · `teams idle prevention`
 
 ---
 
