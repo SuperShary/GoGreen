@@ -18,11 +18,13 @@
 </p>
 
 <p align="center">
-  <img src="assets/gogreen-screenshot.png" alt="GoGreen App Screenshot - Keep Microsoft Teams Status Green Available Always - Dark Theme GUI with Duration Control Schedule and Activity Log" width="420">
+  <img src="assets/gogreen-desktop-v2.png" alt="GoGreen v2 Python Desktop App - Keep Microsoft Teams Status Green Available Always - Dark Theme GUI with Duration Control Schedule Activity Log and Permission Detection" width="360">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/gogreen-chrome-extension.png" alt="GoGreen Chrome Extension - Keep Teams Web Status Green Available - Browser Extension Dark Theme with Auto-Start Interval Control" width="300">
 </p>
 
 <p align="center">
-  <em>GoGreen v2 running on macOS — premium dark-theme interface with full customization</em>
+  <em>🐍 Python Desktop Tool (left) &nbsp;•&nbsp; 🌐 Chrome Extension (right)</em>
 </p>
 
 ---
@@ -267,17 +269,34 @@ The Chrome extension uses a **three-layer approach** specifically designed for T
 
 ## 🖼️ Screenshots
 
+### 🐍 Python Desktop Tool
+
 <p align="center">
-  <img src="assets/gogreen-screenshot.png" alt="GoGreen Microsoft Teams Status Keeper - Dark Theme GUI Screenshot" width="500">
+  <img src="assets/gogreen-desktop-v2.png" alt="GoGreen v2 Python Desktop App Screenshot - Dark Theme GUI with Active Status Timer Duration Control Activity Interval Schedule and Color-Coded Activity Log" width="500">
 </p>
 
-**Python Desktop Tool features:**
-- 🟢 **Active status** with pulsing green indicator and live timer
+**What you see above:**
+- 🟢 **Active status** with pulsing green indicator, cycle counter, and live timer
 - ⏱️ **Duration control** — presets (2h/4h/8h/12h), custom, or infinite
 - 🔄 **Activity interval slider** — 30 seconds to 5 minutes
 - 📅 **Schedule mode** — set start/stop times and active days
 - ▶ ⏸ ⏹ **One-click controls** — Start, Pause, Stop
-- 📋 **Activity log** — real-time color-coded timestamped entries
+- 📋 **Activity log** — scrollable, color-coded, timestamped (248 entries shown)
+- ✅ **Permission status** — shows Accessibility permission granted
+
+### 🌐 Chrome Extension
+
+<p align="center">
+  <img src="assets/gogreen-chrome-extension.png" alt="GoGreen Chrome Extension Screenshot - Keep Microsoft Teams Web Status Green Available - Browser Extension Popup with Active Status Interval Control and Auto-Start Toggle" width="360">
+</p>
+
+**What you see above:**
+- 🟢 **Active status** — "Teams status is being kept green" with green glow
+- ⏹ **Stop button** — one-click to deactivate
+- 🔄 **Interval slider** — 30 seconds to 5 minutes
+- 🔘 **Auto-start toggle** — automatically activates on Teams web
+- 📌 **Badge indicator** — shows "ON" on the extension icon
+- ℹ️ **Smart guidance** — tells users when to use Python tool vs extension
 
 ---
 
